@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# 📊 TTrack – Excel Electron Desktop App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A cross-platform desktop application built using **React**, **Node.js**, and **Electron**, designed for uploading and displaying two Excel files (Transcript & Curriculum) inside scrollable panels.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- Upload and parse **two Excel files** (`.xls` or `.xlsx`)
+- Backend converts Excel sheets to **JSON** using `xlsx`
+- View parsed data in **separate scrollable boxes**
+- Runs as a **native desktop app** using Electron
+- Clean UI with headings and upload buttons
+- Local Express.js server handles file parsing
+- Ready for distribution: **Builds `.exe` installer**
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔵 **React** (frontend)
+- 🟢 **Node.js + Express** (backend)
+- 🧠 **Electron** (desktop wrapper)
+- 📦 `xlsx`, `multer`, `cors` (file parsing & handling)
+- 🧰 `concurrently`, `wait-on`, `electron-builder`, `cross-env`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🔧 Available NPM Scripts
 
-### `npm test`
+| Script                        | Description                                           |
+|------------------------------|-------------------------------------------------------|
+| `npm start`                  | Start React dev server (browser disabled)             |
+| `npm run server`             | Start Express backend                                 |
+| `npm run dev`                | Start both backend and frontend in dev mode           |
+| `npm run electron`           | Start Electron with local `build/` output             |
+| `npm run electron-dev`       | Dev mode: backend + React + Electron window           |
+| `npm run start-electron`     | Alias for `npm run electron-dev`                      |
+| `npm run build`              | Builds React app                                      |
+| `npm run dist`               | Build Electron `.exe` installer (Windows x64)         |
+| `npm run full-build`         | Build React + Electron installer                      |
+| `npm run clean`              | Remove `dist/` and `build/` folders                   |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧪 How to Run in Development
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Install dependencies
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Run the app in Electron + Dev mode
+```
+npm run start-electron
+```
