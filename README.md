@@ -47,3 +47,13 @@ npm install
 ```
 npm run start-electron
 ```
+
+## Running Build for dekstop app (Current not generating an exe installer file)
+```
+npm run full-build
+```
+
+This will:
+Build the React frontend
+Package everything with Electron
+Output a .exe installer in the dist/ folder
